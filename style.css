@@ -1,0 +1,359 @@
+/* =====================================================
+   PROYECTO: APLICACIÓN DE CONSOLA JAVASCRIPT
+   HOJA DE ESTILOS
+   ===================================================== */
+
+
+/* -----------------------------------------------------
+   CONFIGURACIÓN GENERAL
+   ----------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+
+/* -----------------------------------------------------
+   CONTENEDOR PRINCIPAL
+   ----------------------------------------------------- */
+
+.contenedor {
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+
+/* -----------------------------------------------------
+   ENCABEZADO
+   ----------------------------------------------------- */
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.etiqueta {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.encabezado h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.encabezado p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* -----------------------------------------------------
+   TARJETAS
+   ----------------------------------------------------- */
+
+.tarjeta {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.tarjeta h2 {
+    margin-bottom: 6px;
+}
+
+.descripcion {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+
+/* -----------------------------------------------------
+   MENSAJES
+   ----------------------------------------------------- */
+
+.mensaje {
+    min-height: 20px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.mensaje.exito {
+    color: #15803d;
+}
+
+.mensaje.error {
+    color: #dc2626;
+}
+
+
+/* -----------------------------------------------------
+   FORMULARIO
+   ----------------------------------------------------- */
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: #2563eb;
+}
+
+
+/* -----------------------------------------------------
+   BOTONES DE OPERACIONES
+   ----------------------------------------------------- */
+
+.operaciones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 13px 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.sumar {
+    background: #16a34a;
+}
+
+.restar {
+    background: #2563eb;
+}
+
+.multiplicar {
+    background: #9333ea;
+}
+
+.dividir {
+    background: #ea580c;
+}
+
+
+/* -----------------------------------------------------
+   RESULTADO
+   ----------------------------------------------------- */
+
+.resultado {
+    margin-top: 25px;
+    padding: 22px;
+    background: #f8fafc;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.resultado span {
+    display: block;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.resultado strong {
+    font-size: 36px;
+    color: #2563eb;
+}
+
+
+/* -----------------------------------------------------
+   ESTADÍSTICAS
+   ----------------------------------------------------- */
+
+.estadisticas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.estadistica {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.06);
+}
+
+.estadistica span {
+    display: block;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.estadistica strong {
+    font-size: 28px;
+    color: #1e293b;
+}
+
+
+/* -----------------------------------------------------
+   HISTORIAL
+   ----------------------------------------------------- */
+
+.titulo-historial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titulo-historial p {
+    color: #64748b;
+    margin-top: 5px;
+}
+
+.btn-limpiar {
+    border: 1px solid #cbd5e1;
+    background: white;
+    color: #475569;
+    padding: 9px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btn-limpiar:hover {
+    background: #f1f5f9;
+}
+
+
+/* -----------------------------------------------------
+   ELEMENTOS DEL HISTORIAL
+   ----------------------------------------------------- */
+
+.lista-historial {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.operacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.operacion-info strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.operacion-info span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.operacion-resultado {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.sin-resultados {
+    text-align: center;
+    padding: 30px;
+    color: #94a3b8;
+}
+
+.sin-resultados span {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* -----------------------------------------------------
+   FOOTER
+   ----------------------------------------------------- */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+
+/* -----------------------------------------------------
+   DISEÑO RESPONSIVO
+   ----------------------------------------------------- */
+
+@media (max-width: 650px) {
+    .contenedor {
+        width: 94%;
+        padding: 25px 0;
+    }
+    .encabezado h1 {
+        font-size: 25px;
+    }
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+    .operaciones {
+        grid-template-columns: 1fr 1fr;
+    }
+    .estadisticas {
+        grid-template-columns: 1fr 1fr;
+    }
+    .operacion {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
